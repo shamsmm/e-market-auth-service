@@ -21,7 +21,7 @@ const verifyToken = (token) => {
     const decoded = jwt.verify(token, secret);
     return {
       valid: true,
-      user: decoded
+      user: decoded.id
     };
   } catch (error) {
     return {
